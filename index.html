@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Field Notes | Personal Blog Demo</title>
+    <meta
+      name="description"
+      content="A lightweight personal blog demo for testing a static website deployment workflow."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Field Notes home">
+        <span class="brand-mark">FN</span>
+        <span>Field Notes</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+        <a href="#subscribe">Subscribe</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="kicker">Personal blog demo</p>
+        <h1>Notes on building, learning, and shipping small things well.</h1>
+        <p class="hero-copy">
+          A simple static site to test your hosting, domain, update, and publish workflow before building the full business website.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#writing">Read latest</a>
+          <a class="button secondary" href="mailto:hello@example.com">Contact</a>
+        </div>
+      </section>
+
+      <section class="section intro-grid" aria-label="Blog summary">
+        <article>
+          <p class="label">Focus</p>
+          <h2>Quiet, practical posts</h2>
+          <p>
+            This demo uses clean typography, fast-loading markup, and a layout that can later become a company knowledge hub, product article center, or founder blog.
+          </p>
+        </article>
+        <article>
+          <p class="label">Stack</p>
+          <h2>Plain static files</h2>
+          <p>
+            No build tools are required. Cloudflare Pages, GitHub Pages, Netlify, Vercel, or any static host can publish this folder.
+          </p>
+        </article>
+      </section>
+
+      <section id="writing" class="section">
+        <div class="section-heading">
+          <p class="label">Latest writing</p>
+          <h2>Recent notes</h2>
+        </div>
+
+        <div class="post-list">
+          <article class="post-card">
+            <p class="post-meta">June 5, 2026 · Workflow</p>
+            <h3>Starting with a static site</h3>
+            <p>
+              Before investing in a large website, publish a small page, connect the domain, check speed, and practice updates.
+            </p>
+            <a href="#" aria-label="Read Starting with a static site">Read note</a>
+          </article>
+
+          <article class="post-card">
+            <p class="post-meta">June 5, 2026 · Hosting</p>
+            <h3>Why static hosting is enough</h3>
+            <p>
+              For a first version, static pages are stable, inexpensive, globally cacheable, and easy to maintain without server work.
+            </p>
+            <a href="#" aria-label="Read Why static hosting is enough">Read note</a>
+          </article>
+
+          <article class="post-card">
+            <p class="post-meta">June 5, 2026 · Content</p>
+            <h3>Turning a blog into a business site</h3>
+            <p>
+              The same structure can evolve into product pages, FAQs, case studies, and search-friendly industry articles.
+            </p>
+            <a href="#" aria-label="Read Turning a blog into a business site">Read note</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div>
+          <p class="label">About</p>
+          <h2>A small site for testing the full publishing loop.</h2>
+        </div>
+        <p>
+          Use this page to verify the basics: local editing, browser preview, GitHub upload, Cloudflare Pages deployment, custom domain binding, HTTPS, and later content updates.
+        </p>
+      </section>
+
+      <section id="subscribe" class="section subscribe">
+        <div>
+          <p class="label">Subscribe</p>
+          <h2>Get new notes by email.</h2>
+          <p>Replace this with a real form provider once the hosting flow is working.</p>
+        </div>
+        <form class="subscribe-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <label for="email">Email address</label>
+          <div class="form-row">
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <button type="submit">Join</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Field Notes. Static blog demo.</p>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
