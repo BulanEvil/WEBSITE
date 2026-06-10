@@ -38,10 +38,9 @@ a {
 
 .hero {
   width: min(1040px, 100%);
-  min-height: min(720px, calc(100vh - 72px));
+  min-height: min(540px, calc(100vh - 72px));
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 44px;
+  place-items: center;
   padding: clamp(28px, 5vw, 56px);
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(219, 227, 231, 0.9);
@@ -49,39 +48,9 @@ a {
   box-shadow: var(--shadow);
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--accent-strong);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.brand-mark {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--soft);
-  font-size: 14px;
-  letter-spacing: 0;
-}
-
 .hero-content {
-  align-self: center;
+  text-align: center;
   max-width: 790px;
-}
-
-.kicker {
-  margin: 0 0 14px;
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 h1 {
@@ -92,15 +61,8 @@ h1 {
   letter-spacing: 0;
 }
 
-.hero-copy {
-  max-width: 680px;
-  margin: 26px 0 0;
-  color: var(--muted);
-  font-size: clamp(18px, 2.4vw, 22px);
-  line-height: 1.55;
-}
-
 .actions {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -125,50 +87,9 @@ h1 {
   color: #ffffff;
 }
 
-.secondary {
-  background: #ffffff;
-  color: var(--accent-strong);
-}
-
-.status-panel {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0;
-}
-
-.status-panel div {
-  min-height: 116px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-dt {
-  margin-bottom: 8px;
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-dd {
-  margin: 0;
-  color: var(--ink);
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
 @media (max-width: 760px) {
   .hero {
     min-height: auto;
-    gap: 34px;
-  }
-
-  .status-panel {
-    grid-template-columns: 1fr;
   }
 
   .actions {
