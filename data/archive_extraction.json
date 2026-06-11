@@ -1,0 +1,30 @@
+[
+  {
+    "archive_path": "original assets/网站产品照片/照片打包.rar",
+    "extension": ".rar",
+    "status": "needs_external_extractor",
+    "output_dir": "",
+    "note": "RAR extraction requires 7-Zip/WinRAR or another extractor."
+  },
+  {
+    "archive_path": "original assets/网站产品照片/网站主图.rar",
+    "extension": ".rar",
+    "status": "needs_external_extractor",
+    "output_dir": "",
+    "note": "RAR extraction requires 7-Zip/WinRAR or another extractor."
+  },
+  {
+    "archive_path": "original assets/网站产品照片/网站主图.zip",
+    "extension": ".zip",
+    "status": "extracted",
+    "output_dir": ".asset-staging/extracted/UNIDENTIFIED",
+    "note": ""
+  },
+  {
+    "archive_path": "original assets/网站产品照片/抠图效果图/第一次抠图/7张 机器png.zip",
+    "extension": ".zip",
+    "status": "extracted",
+    "output_dir": ".asset-staging/extracted/7-PNG",
+    "note": ""
+  }
+]
