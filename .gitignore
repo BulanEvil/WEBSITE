@@ -4,3 +4,4 @@ company info/
 *.psd
 *.rar
 *.zip
+scripts/__pycache__/
