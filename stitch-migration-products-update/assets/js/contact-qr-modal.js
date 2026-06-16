@@ -1,16 +1,17 @@
 (function () {
   const script = document.currentScript;
   const assetBase = new URL("../contact/", script ? script.src : window.location.href);
+  const isRussian = document.documentElement.lang === "ru";
   const contacts = {
     whatsapp: {
       title: "Annie",
       image: new URL("annie-whatsapp-cropped.jpg", assetBase).href,
-      alt: "Annie WhatsApp QR code"
+      alt: isRussian ? "QR-код WhatsApp Annie" : "Annie WhatsApp QR code"
     },
     wechat: {
       title: "Annie",
       image: new URL("annie-wechat-cropped.jpg", assetBase).href,
-      alt: "Annie WeChat QR code"
+      alt: isRussian ? "QR-код WeChat Annie" : "Annie WeChat QR code"
     }
   };
 
@@ -23,7 +24,7 @@
     node.setAttribute("aria-hidden", "true");
     node.innerHTML = `
       <div class="qr-modal-panel" role="dialog" aria-labelledby="qr-modal-title">
-        <button class="qr-modal-close" type="button" aria-label="Close QR code" data-qr-close>x</button>
+        <button class="qr-modal-close" type="button" aria-label="${isRussian ? "Закрыть QR-код" : "Close QR code"}" data-qr-close>x</button>
         <div class="qr-modal-copy">
           <h2 id="qr-modal-title"></h2>
         </div>
@@ -78,21 +79,25 @@
     activeTrigger = null;
   }
 
+  function contactTypeFor(trigger) {
+    return trigger.dataset.qrType || (trigger.classList.contains("wechat") ? "wechat" : "whatsapp");
+  }
+
   document.addEventListener("click", (event) => {
-    const trigger = event.target.closest(".header-icon-button.whatsapp, .header-icon-button.wechat");
+    const trigger = event.target.closest(".header-icon-button[data-qr-type], .header-icon-button.whatsapp, .header-icon-button.wechat");
     if (!trigger) return;
     event.preventDefault();
     if (modal && modal.classList.contains("is-open") && activeTrigger === trigger) {
       closeModal();
       return;
     }
-    openModal(trigger.classList.contains("wechat") ? "wechat" : "whatsapp", trigger);
+    openModal(contactTypeFor(trigger), trigger);
   });
 
   document.addEventListener("click", (event) => {
     if (!modal || !modal.classList.contains("is-open")) return;
     if (event.target.closest(".qr-modal-panel")) return;
-    if (event.target.closest(".header-icon-button.whatsapp, .header-icon-button.wechat")) return;
+    if (event.target.closest(".header-icon-button[data-qr-type], .header-icon-button.whatsapp, .header-icon-button.wechat")) return;
     closeModal();
   });
 

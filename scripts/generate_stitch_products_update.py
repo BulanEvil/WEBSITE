@@ -136,10 +136,10 @@ def header(active: str, prefix: str = "") -> str:
         {nav}
       </nav>
       <div class="header-quick-actions" aria-label="Quick contact">
-        <a class="header-icon-button whatsapp" href="{prefix}contact.html" aria-label="WhatsApp contact" title="WhatsApp">
+        <a class="header-icon-button whatsapp" data-qr-type="whatsapp" href="{prefix}contact.html" aria-label="WhatsApp contact" title="WhatsApp">
           <img src="{prefix}assets/icons/whatsapp.svg" alt="" loading="lazy" />
         </a>
-        <a class="header-icon-button wechat" href="{prefix}contact.html" aria-label="WeChat contact" title="WeChat">
+        <a class="header-icon-button wechat" data-qr-type="wechat" href="{prefix}contact.html" aria-label="WeChat contact" title="WeChat">
           <img src="{prefix}assets/icons/wechat.svg" alt="" loading="lazy" />
         </a>
         <a class="header-icon-button email" href="{mailto('RFQ from Evergold website')}" aria-label="Email sales" title="Email sales">
@@ -181,6 +181,7 @@ def page(title: str, description: str, body: str, active: str = "Products", pref
     {header(active, prefix)}
     {body}
     {footer(prefix)}
+    <script src="{prefix}assets/js/contact-qr-modal.js?v=qr-type-1" defer></script>
   </body>
 </html>
 """
