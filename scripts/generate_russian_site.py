@@ -724,7 +724,10 @@ def add_english_language_switch() -> None:
         <span aria-current="page">EN</span>
         <a href="{ru_href}" lang="ru">RU</a>
       </div>"""
-        text = text.replace("\n      <a class=\"header-cta\"", f"{switch}\n      <a class=\"header-cta\"", 1)
+        replacement = f"\n{switch}\n      <a class=\"header-cta\""
+        text, count = re.subn(r'\s*<a class="header-cta"', replacement, text, count=1)
+        if count != 1:
+            raise RuntimeError(f"Missing header CTA in {html_file.relative_to(SITE)}")
         html_file.write_text(text, encoding="utf-8")
 
 
