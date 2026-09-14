@@ -232,12 +232,16 @@ def header(active: str, current_path: str, depth: int = 1) -> str:
 
 def footer(depth: int = 1) -> str:
     root_prefix = "" if depth == 1 else "../"
+    asset_prefix = "../" if depth == 1 else "../../"
     return f"""<footer class="site-footer">
       <div>
         <strong>EVERGOLD TECHNOLOGY PTE. LTD.</strong>
         <span>Поставка оригинальных промышленных деталей CATERPILLAR для международных покупателей.</span>
       </div>
       <div class="footer-links">
+        <a class="footer-social-link footer-vk-link" href="https://vk.ru/evergold1" target="_blank" rel="noopener noreferrer" aria-label="Evergold в VK" title="Evergold в VK">
+          <img src="{asset_prefix}assets/icons/vk.svg" alt="" />
+        </a>
         <a href="{root_prefix}products.html">Продукция</a>
         <a href="{root_prefix}about.html">О компании</a>
         <a href="{root_prefix}contact.html">Контакты</a>

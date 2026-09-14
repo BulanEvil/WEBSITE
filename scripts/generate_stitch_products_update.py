@@ -157,6 +157,9 @@ def footer(prefix: str = "") -> str:
         <span>CATERPILLAR genuine industrial parts supply for global buyers.</span>
       </div>
       <div class="footer-links">
+        <a class="footer-social-link footer-vk-link" href="https://vk.ru/evergold1" target="_blank" rel="noopener noreferrer" aria-label="Visit Evergold on VK" title="Evergold on VK">
+          <img src="{prefix}assets/icons/vk.svg" alt="" />
+        </a>
         <a href="{prefix}products.html">Products</a>
         <a href="{prefix}about.html">About</a>
         <a href="{prefix}contact.html">Contact</a>

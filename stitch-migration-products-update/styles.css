@@ -1531,6 +1531,30 @@ h1 {
   padding-right: var(--margin);
   color: #fff;
 }
+.footer-links .footer-social-link {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+.footer-links .footer-social-link img {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+.footer-links .footer-vk-link:hover,
+.footer-links .footer-vk-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: #78b8ff;
+  background: #0077ff;
+  color: #fff;
+}
 .legal-note {
   grid-column: 1 / -1;
   max-width: var(--container);
